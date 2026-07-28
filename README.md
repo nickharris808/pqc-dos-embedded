@@ -136,7 +136,7 @@ Tests skip cleanly when the cross-toolchain or QEMU is absent.
 Extracted from a research lab on post-quantum authentication for constrained and wireless
 devices. The bound demonstrated here is machine-checked in Lean (theorems `bounded`,
 `naive_unbounded`, `gated_le_naive`, `separation`) and re-verifiable on-device without a
-solver — see the companion [`farkas-check`](../farkas-check) package.
+solver — see the companion [`farkas-check`](https://github.com/nickharris808/farkas-check) package.
 
 This demo shows **one bound on one device**. Closing the full set of post-quantum migration
 failure families — downgrade, key reinstallation, fragment splicing, roaming, multi-link key
@@ -144,6 +144,35 @@ separation and the rest — is what the closed core does.
 
 Relevant subject matter is covered by a filed provisional patent application.
 For commercial use, open a [GitHub Discussion](https://github.com/nickharris808) or an issue.
+
+---
+
+## The PQC migration toolkit
+
+Nine free tools for teams moving authenticated key exchange to post-quantum. They **find and measure**; they do not repair.
+
+| Tool | What it does | Where |
+|---|---|---|
+| [pqc-sizes](https://github.com/nickharris808/pqc-sizes) | Sizes, fragment counts, and the two-sided reassembly window | PyPI |
+| [pqc-sizes-js](https://github.com/nickharris808/pqc-sizes-js) | The same arithmetic for Node and the browser | npm |
+| [pqc-guard-action](https://github.com/nickharris808/pqc-guard-action) | Fail the build when the window is empty | GitHub Action |
+| **pqc-dos-embedded** ← you are here | 169 lines of C: the failure on a real 64 KB device | source |
+| [farkas-check](https://github.com/nickharris808/farkas-check) | Re-verify the bound on-device, no SMT solver | source |
+| [pqc-migration-mcp](https://github.com/nickharris808/pqc-migration-mcp) | Six MCP tools for AI agents | PyPI |
+| [pqc-mfb](https://github.com/nickharris808/pqc-mfb) | 322 cases · 39 failure families · scorer | PyPI |
+| [pqc-mfb (data)](https://huggingface.co/datasets/nickh007/pqc-mfb) | The benchmark as a dataset | HF |
+| [pqc-formal-corpus](https://huggingface.co/datasets/nickh007/pqc-formal-corpus) | 122 named formal results, 6 provers | HF |
+| [pqc-explorer](https://huggingface.co/spaces/nickh007/pqc-explorer) | Try it in your browser, no install | HF Space |
+
+**Start here:** [`pqc-sizes`](https://github.com/nickharris808/pqc-sizes) tells you in five seconds whether your credential fragments and whether a safe cap exists. [`pqc-explorer`](https://huggingface.co/spaces/nickh007/pqc-explorer) does the same in a browser.
+
+### The closed core
+
+Closing the 39 failure families — downgrade binding, retransmission-safe installation, fragmentation transcripts, roaming forward secrecy, multi-link key separation, admission control, group-key binding — is a separate proprietary codebase. Relevant subject matter is covered by a filed provisional patent application.
+
+That split is measured, not asserted: under a replicate noise control only **4 of 32** repair mechanisms are externally distinguishable, so publishing these detectors does not disclose the repairs.
+
+For commercial licensing, open a [GitHub Discussion](https://github.com/nickharris808/pqc-sizes/discussions) or an issue on any of these repos.
 
 ## License
 
