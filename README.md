@@ -165,7 +165,7 @@ not from a model.
 
 ## The PQC migration toolkit
 
-Nine free tools for teams moving authenticated key exchange to post-quantum. They **find and measure**; they do not repair.
+Eleven free tools for teams moving authenticated key exchange to post-quantum. They **find and measure**; they do not repair.
 
 | Tool | What it does | Where |
 |---|---|---|
@@ -178,6 +178,8 @@ Nine free tools for teams moving authenticated key exchange to post-quantum. The
 | [pqc-mfb](https://github.com/nickharris808/pqc-mfb) | 322 cases · 39 failure families · scorer | PyPI |
 | [pqc-mfb (data)](https://huggingface.co/datasets/nickh007/pqc-mfb) | The benchmark as a dataset | HF |
 | [pqc-formal-corpus](https://huggingface.co/datasets/nickh007/pqc-formal-corpus) | 122 named formal results, 6 provers | HF |
+| [pqc-bounds-lean](https://github.com/nickharris808/pqc-bounds-lean) | The same bound in Lean 4 — 0 `sorry`, 0 imports | source |
+| [pqc-dos-gate-rtl](https://github.com/nickharris808/pqc-dos-gate-rtl) | The gate in synthesizable RTL, 5 Yosys proofs | source |
 | [pqc-explorer](https://huggingface.co/spaces/nickh007/pqc-explorer) | Try it in your browser, no install | HF Space |
 
 **New here?** The [end-to-end tutorial](https://github.com/nickharris808/pqc-sizes/blob/main/TUTORIAL.md) walks one realistic migration through all of them in about ten minutes: sizes -> window -> CI gate -> benchmark.
