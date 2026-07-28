@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+title: "pqc-dos-embedded"
+message: "If you use this software or dataset, please cite it."
+type: software
+abstract: >-
+  A 60-second reproduction of post-quantum reassembly exhaustion on emulated ARMv7-M.
+authors:
+  - name: "PQC Migration Safety Lab"
+repository-code: "https://github.com/nickharris808/pqc-dos-embedded"
+url: "https://nickharris808.github.io/pqc-toolkit/"
+license: Apache-2.0
+version: "0.2.0"
+date-released: "2026-07-28"
+keywords:
+  - post-quantum cryptography
+  - protocol verification
+  - ML-KEM
+  - ML-DSA
+  - fragmentation

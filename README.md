@@ -14,6 +14,8 @@ heap **identical to the byte** to what it used on a benign 64-fragment message.
 Runs on a real ARMv7-M ISA under QEMU. **169 lines of freestanding C**, no OS, no libc, no
 crypto library. Read the whole thing over a coffee, then run it yourself.
 
+**📖 Full documentation, tutorial and conceptual guide: <https://nickharris808.github.io/pqc-toolkit/>**
+
 ---
 
 ## Why this exists
