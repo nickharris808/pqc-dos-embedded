@@ -145,6 +145,22 @@ separation and the rest — is what the closed core does.
 Relevant subject matter is covered by a filed provisional patent application.
 For commercial use, open a [GitHub Discussion](https://github.com/nickharris808) or an issue.
 
+## Honest scope
+
+**What this proves.** That on a real ARMv7-M target under QEMU, an unbounded
+reassembly design requests memory proportional to attacker input while the
+bounded design completes at a fixed peak heap. The numbers come from running it,
+not from a model.
+
+**What it does NOT prove.**
+
+- **Not that your device behaves this way.** This is a 169-line freestanding
+  demonstration, not your firmware.
+- **Not a repair.** It shows the failure and one bound. Closing the family in a
+  real stack is a different problem.
+- **Not a vulnerability in any product.** No vendor's code is involved.
+- **Not a timing or side-channel result.** Peak heap only.
+
 ---
 
 ## The PQC migration toolkit
@@ -164,7 +180,9 @@ Nine free tools for teams moving authenticated key exchange to post-quantum. The
 | [pqc-formal-corpus](https://huggingface.co/datasets/nickh007/pqc-formal-corpus) | 122 named formal results, 6 provers | HF |
 | [pqc-explorer](https://huggingface.co/spaces/nickh007/pqc-explorer) | Try it in your browser, no install | HF Space |
 
-**Start here:** [`pqc-sizes`](https://github.com/nickharris808/pqc-sizes) tells you in five seconds whether your credential fragments and whether a safe cap exists. [`pqc-explorer`](https://huggingface.co/spaces/nickh007/pqc-explorer) does the same in a browser.
+**New here?** The [end-to-end tutorial](https://github.com/nickharris808/pqc-sizes/blob/main/TUTORIAL.md) walks one realistic migration through all of them in about ten minutes: sizes -> window -> CI gate -> benchmark.
+
+**In a hurry?** [`pqc-sizes`](https://github.com/nickharris808/pqc-sizes) tells you in five seconds whether your credential fragments and whether a safe cap exists. [`pqc-explorer`](https://huggingface.co/spaces/nickh007/pqc-explorer) does the same in a browser, with no install.
 
 ### The closed core
 
