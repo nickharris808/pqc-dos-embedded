@@ -1,3 +1,9 @@
+# VERSION CORRECTED 2026-07-30. This file said `version: "0.2.0"` with
+# `date-released: "2026-07-28"`. NEITHER IS TRUE: the GitHub API reports zero tags
+# and zero releases on this repository, and where package metadata exists it says
+# 0.1.0. Nothing has been released, so a release date is not available to state.
+# `date-released` is therefore omitted rather than invented; it returns when a tag
+# does. See oss/PUBLISHING.md, whose worked example is what seeded the 0.2.0.
 cff-version: 1.2.0
 title: "pqc-dos-embedded"
 message: "If you use this software or dataset, please cite it."
@@ -9,8 +15,7 @@ authors:
 repository-code: "https://github.com/nickharris808/pqc-dos-embedded"
 url: "https://nickharris808.github.io/pqc-toolkit/"
 license: Apache-2.0
-version: "0.2.0"
-date-released: "2026-07-28"
+version: "0.1.0"
 keywords:
   - post-quantum cryptography
   - protocol verification
